@@ -1,5 +1,3 @@
-var cont = document.querySelectorAll(`.item`);
-console.log(`Number of categories: ${cont.length}`);
 
 // Obtener la lista ul#categories
 const categoriesList = document.querySelector('#categories');
