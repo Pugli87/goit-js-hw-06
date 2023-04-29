@@ -25,15 +25,15 @@ const gallery = document.querySelector('.gallery');
 
  
 // Generamos el HTML de la galería utilizando un map sobre el array de imágenes
-const galleryHTML = images
-.map(
-  (image) => `
+const galleryHTML = images.map((image) => `
     <li>
       <img src="${image.url}" alt="${image.alt}">
     </li>
   `
-)
-.join("");
+); // unimos cada imagen con el metod join("")
 
 // Utilizamos insertAdjacentHTML para insertar el HTML de la galería en el DOM
 gallery.insertAdjacentHTML("beforeend", galleryHTML);
+//se utiliza el método insertAdjacentHTML() 
+//para insertar galleryItems en la lista galleryList
+// antes del último elemento ('beforeend').
