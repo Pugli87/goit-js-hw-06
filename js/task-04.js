@@ -1,22 +1,23 @@
-// obtener elementos del DOM
-const decrementButton = document.querySelector('[data-action="decrement"]');
-const incrementButton = document.querySelector('[data-action="increment"]');
-const counterValueElement = document.getElementById('value');
 
-// inicializar el contador en 0
+// Obtener elementos del DOM
+const valueEl = document.getElementById('value');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const incrementBtn = document.querySelector('[data-action="increment"]');
+
+// Inicializar contador
 let counterValue = 0;
 
-// función para actualizar el valor del contador y la interfaz
-function updateCounterValue(newValue) {
-  counterValue = newValue;
-  counterValueElement.textContent = counterValue;
+// Funciones de incremento y decremento
+function increment() {
+  counterValue += 1;
+  valueEl.textContent = counterValue;
 }
 
-// agregar escuchadores de clic para los botones
-decrementButton.addEventListener('click', () => {
-  updateCounterValue(counterValue - 1);
-});
+function decrement() {
+  counterValue -= 1;
+  valueEl.textContent = counterValue;
+}
 
-incrementButton.addEventListener('click', () => {
-  updateCounterValue(counterValue + 1);
-});
+// Asignacion escuchas de clic a los botones
+decrementBtn.addEventListener('click', decrement);
+incrementBtn.addEventListener('click', increment);
