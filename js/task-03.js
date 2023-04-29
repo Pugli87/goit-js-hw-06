@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const gallery = document.querySelector('.gallery');
+
+//  images.forEach((img) => {
+//    const image = document.createElement("img");
+//    image.src = img.url;
+//    image.alt =img.alt;
+//    gallery.append(image);
+//  });
+
+
+ 
+// Generamos el HTML de la galería utilizando un map sobre el array de imágenes
+const galleryHTML = images
+.map(
+  (image) => `
+    <li>
+      <img src="${image.url}" alt="${image.alt}">
+    </li>
+  `
+)
+.join("");
+
+// Utilizamos insertAdjacentHTML para insertar el HTML de la galería en el DOM
+gallery.insertAdjacentHTML("beforeend", galleryHTML);
