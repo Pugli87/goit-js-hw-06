@@ -1,5 +1,4 @@
 const Input = document.querySelector(`#name-input`);
-
 const Output = document.querySelector('#name-output');
 
 Input.addEventListener('input', function() {
