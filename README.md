@@ -84,6 +84,7 @@ Cree un elemento separado <li>. Asegúrese de usar el método document.createEle
 Añada el nombre de un ingrediente como contenido de texto.
 Añada una clase item al elemento.
 Después, inserte todos los <li> en una sola operación en la lista ul#ingredients.
+
 Tarea 3
 Escriba un script para crear una galería de imágenes a partir de un array de datos. El HTML tiene una lista ul.gallery.
 
