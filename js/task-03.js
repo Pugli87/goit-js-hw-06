@@ -22,13 +22,15 @@ const gallery = document.querySelector('.gallery');
 //    gallery.append(image);
 //  });
 
-// Generamos el HTML de la galería utilizando un map sobre el array de imágenes
-const galleryHTML = images.map((image) => 
-  `
-    <li >
-      <img  width="200px" height="200px" src="${image.url}" alt="${image.alt}" >
+const galleryHTML = images.map((image) => {
+  const img = `
+    <li>
+      <img  src="${image.url}" alt="${image.alt}">
     </li>
-  `
-);
+  `;
+
+  return img;
+}).join("");
 gallery.insertAdjacentHTML("beforeend", galleryHTML);
-console.log(gallery);
+
+
