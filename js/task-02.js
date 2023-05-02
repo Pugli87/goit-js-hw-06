@@ -17,17 +17,6 @@ const ingredients = [
 //    ulIngredients.appendChild(li);
 //  });
 
-// const ulIngredients = document.querySelector(`#ingredients`);
-// const liArray = ingredients.map(ingredient => {
-//   const li = document.createElement(`li`);
-//   li.appendChild(document.createTextNode(ingredient));
-//   li.classList.add(`item`);
-//   return li;
-// });
-
-// ulIngredients.append(...liArray);
-
-
 const ulIngredients = document.querySelector(`#ingredients`);
 const liArray = ingredients.map(ingredients => {
   const li = document.createElement(`li`);
